@@ -1,0 +1,52 @@
+{
+   "Auswahlverfahren": "vollstaendig",
+   "max. Variationen": 4000,
+   "Fehlerbestimmungsmethode": "fehlerquadrate",
+   "Versuchsablauf": {
+      "01": {
+         "Referenzdaten": {
+            "Datei": "referenz.json",
+            "Daten": [["T-dicht01", "Data", "Axiale Dehnung [%]"],
+                     ["T-dicht01", "Data", "Volumetrische Dehnung [%]"],
+                     ["T-dicht01", "Data", "Deviatorspannung [kPa]"]],
+            "Relevante x-Werte": [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0]
+         },
+         "Berechnungsprogramm": {
+            "Name": "Umat_Triax",
+            "zus. Argumente Start": ["Hypo-VW96", "-100", "1", "0.2", "14"],
+            "zus. Argumente Ende":  ["0.52"]
+         },
+         "Gewichtungsfaktor": 1.0
+      },
+      "07": {
+         "Referenzdaten": {
+            "Datei": "referenz.json",
+            "Daten": [["O-dicht07", "Data", "Axialspannung [kPa]"],
+                     ["O-dicht07", "Data", "Porenzahl [-]"]],
+            "Relevante x-Werte": [10.0, 13.22, 17.47, 23.08, 30.51, 40.32, 53.29, 70.43, 93.08, 123.02, 162.58, 214.87, 283.98, 375.31, 496.02, 655.55, 866.38, 1145.03, 1513.29, 2000.0]
+         },
+         "Berechnungsprogramm": {
+            "Name": "Umat_Oedo",
+            "zus. Argumente Start": ["Hypo-VW96", "2", "-10", "-2000", "14"],
+            "zus. Argumente Ende":  ["0.507"]
+         },
+         "Gewichtungsfaktor": 1.0
+      }
+   },
+   "Optimierungsraum": {
+      "Bezeichnungen":  ["phi_c [rad]",  "-",   "h_s [kPa]", "n [-]", "e_d0 [-]", "e_c0 [-]", "e_i0 [-]", "alpha_H [-]", "beta_H [-]", "m_T [-]", "m_R [-]", "R_max [-]", "beta_R [-]", "chi [-]"],
+      "Werte (min)":    [0.5515,         0.0,    1.0e6,      0.10,    0.5,        0.75,       0.9,        0.05,          1.5,          2.0,       5.0,       0.0001,      0.5,          6.0],
+      "Werte (max)":    [0.5515,         0.0,    4.0e6,      0.40,    0.6,        0.85,       1.0,        0.1,           2.5,          2.0,       5.0,       0.0001,      0.5,          6.0],
+      "Variationen":    [0,              0,      1,          1,       1,          1,          1,          1,             1,            0,         0,         0,           0,            0],
+      "Bedingungen":    [
+         ["e_c0 [-]", ">", "e_d0 [-]"],
+         ["e_i0 [-]",  ">", "e_c0 [-]"],
+         ["m_R [-]",  ">", "m_T [-]"]
+      ]
+   },
+   "Plot Kurven": [5, 50],
+   "Arbeitsverzeichnis": "workdir",
+   "Ausgabedatei_Variationen": "variationen.txt",
+   "Ausgabedatei_Differenzen": "differenzen.txt",
+   "Ausgabedatei_Bewertung": "ergebnisse.txt"
+}

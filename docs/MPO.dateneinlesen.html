@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module MPO.dateneinlesen</title>
+<style type="text/css">
+body {
+    background-color: #f0f0f8;
+}
+
+table.heading tr {
+    background-color: #7799ee;
+}
+
+.decor {
+    color: #ffffff;
+}
+
+.title-decor {
+    background-color: #ffc8d8;
+    color: #000000;
+}
+
+.pkg-content-decor {
+    background-color: #aa55cc;
+}
+
+.index-decor {
+    background-color: #ee77aa;
+}
+
+.functions-decor {
+    background-color: #eeaa77;
+}
+
+.data-decor {
+    background-color: #55aa55;
+}
+
+.author-decor {
+    background-color: #7799ee;
+}
+
+.credits-decor {
+    background-color: #7799ee;
+}
+
+.error-decor {
+    background-color: #bb0000;
+}
+
+.grey {
+    color: #909090;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.repr {
+    color: #c040c0;
+}
+
+table.heading tr td.title {
+    vertical-align: bottom;
+}
+
+table.heading tr td.extra {
+    vertical-align: bottom;
+    text-align: right;
+}
+
+.heading-text {
+    font-family: helvetica, arial;
+}
+
+.bigsection {
+    font-size: larger;
+}
+
+.title {
+    font-size: x-large;
+}
+
+.code {
+    font-family: monospace;
+}
+
+table {
+    width: 100%;
+    border-spacing : 0;
+    border-collapse : collapse;
+    border: 0;
+}
+
+td {
+    padding: 2;
+}
+
+td.section-title {
+    vertical-align: bottom;
+}
+
+td.multicolumn {
+    width: 25%;
+    vertical-align: bottom;
+}
+
+td.singlecolumn {
+    width: 100%;
+}
+</style>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="MPO.html" class="white">MPO</a>.dateneinlesen</strong></td>
+<td class="extra"><a href=".">index</a><br></td></tr></table>
+    <p><span class="code">dateneinlesen.py&nbsp;&nbsp;&nbsp;v0.2<br>
+2022-12&nbsp;Dominik&nbsp;Zobel</span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-CSV_Ergebnisse_Einlesen"><strong>CSV_Ergebnisse_Einlesen</strong></a>(dateiname)</dt><dd><span class="code">Lese&nbsp;die&nbsp;csv-Datei&nbsp;namens&nbsp;dateiname&nbsp;ein,&nbsp;die&nbsp;Leerzeichen&nbsp;als&nbsp;Trenner&nbsp;verwendet&nbsp;und&nbsp;keine<br>
+Kopfzeile(n)&nbsp;hat.&nbsp;Gibt&nbsp;eine&nbsp;Liste&nbsp;an&nbsp;zeilenweisen&nbsp;Zahleneintraegen&nbsp;zurueck.</span></dd></dl>
+ <dl><dt><a name="-Datei_Einlesen"><strong>Datei_Einlesen</strong></a>(dateiname)</dt><dd><span class="code">Lese&nbsp;die&nbsp;Datei&nbsp;namens&nbsp;dateiname&nbsp;ein&nbsp;und&nbsp;gib&nbsp;den&nbsp;eingelesenen&nbsp;Text&nbsp;zurueck.</span></dd></dl>
+ <dl><dt><a name="-Datei_Schreiben"><strong>Datei_Schreiben</strong></a>(dateiname, inhalt)</dt><dd><span class="code">Schreibe&nbsp;den&nbsp;uebergebenen&nbsp;inhalt&nbsp;in&nbsp;eine&nbsp;Datei&nbsp;namens&nbsp;dateiname.</span></dd></dl>
+ <dl><dt><a name="-Existenz_Datei"><strong>Existenz_Datei</strong></a>(dateiname)</dt><dd><span class="code">Pruefe&nbsp;die&nbsp;Existenz&nbsp;einer&nbsp;Datei.&nbsp;Gibt&nbsp;True&nbsp;zurueck,&nbsp;falls&nbsp;die&nbsp;Datei&nbsp;vorhanden&nbsp;ist.</span></dd></dl>
+ <dl><dt><a name="-JSONDateiEinlesen"><strong>JSONDateiEinlesen</strong></a>(dateiname)</dt><dd><span class="code">Lade&nbsp;eine&nbsp;JSON-formatierte&nbsp;Datei&nbsp;und&nbsp;gib&nbsp;die&nbsp;eingelesene&nbsp;Struktur&nbsp;zurueck.</span></dd></dl>
+ <dl><dt><a name="-JSONDateiSpeichern"><strong>JSONDateiSpeichern</strong></a>(datensatz, dateiname)</dt><dd><span class="code">Speichere&nbsp;die&nbsp;Stuktur&nbsp;datensatz&nbsp;als&nbsp;JSON-formatierte&nbsp;Datei&nbsp;namens&nbsp;dateiname.</span></dd></dl>
+ <dl><dt><a name="-Referenzdaten_Laden"><strong>Referenzdaten_Laden</strong></a>(einstellungen, str_versuch)</dt><dd><span class="code">#&nbsp;-------------------------------------------------------------------------------------------------</span></dd></dl>
+ <dl><dt><a name="-Teildatei_Schreiben"><strong>Teildatei_Schreiben</strong></a>(neue_datei, datei, zeile_start=1, zeile_ende=1000000)</dt><dd><span class="code">Lese&nbsp;den&nbsp;Inhalt&nbsp;aus&nbsp;datei&nbsp;von&nbsp;zeile_start&nbsp;bis&nbsp;zeile_ende&nbsp;(jeweils&nbsp;inklusive).<br>
+Schreibe&nbsp;den&nbsp;eingelesenen&nbsp;Inhalt&nbsp;in&nbsp;neue_datei.</span></dd></dl>
+ <dl><dt><a name="-Variationsdatei_Laden"><strong>Variationsdatei_Laden</strong></a>(dateiname)</dt><dd><span class="code">#&nbsp;-------------------------------------------------------------------------------------------------</span></dd></dl>
+ <dl><dt><a name="-Zeile_Muster"><strong>Zeile_Muster</strong></a>(datei, muster)</dt><dd><span class="code">Lese&nbsp;datei&nbsp;ein&nbsp;und&nbsp;untersuche&nbsp;jede&nbsp;Zeile&nbsp;nach&nbsp;muster.&nbsp;Gibt&nbsp;die&nbsp;(erste)&nbsp;Zeilennummer&nbsp;zurueck,<br>
+die&nbsp;muster&nbsp;enthaelt&nbsp;oder&nbsp;None,&nbsp;falls&nbsp;keine&nbsp;Zeile&nbsp;das&nbsp;Muster&nbsp;enthaelt.</span></dd></dl>
+</td></tr></table>
+</body></html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module MPO.hilfen</title>
+<style type="text/css">
+body {
+    background-color: #f0f0f8;
+}
+
+table.heading tr {
+    background-color: #7799ee;
+}
+
+.decor {
+    color: #ffffff;
+}
+
+.title-decor {
+    background-color: #ffc8d8;
+    color: #000000;
+}
+
+.pkg-content-decor {
+    background-color: #aa55cc;
+}
+
+.index-decor {
+    background-color: #ee77aa;
+}
+
+.functions-decor {
+    background-color: #eeaa77;
+}
+
+.data-decor {
+    background-color: #55aa55;
+}
+
+.author-decor {
+    background-color: #7799ee;
+}
+
+.credits-decor {
+    background-color: #7799ee;
+}
+
+.error-decor {
+    background-color: #bb0000;
+}
+
+.grey {
+    color: #909090;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.repr {
+    color: #c040c0;
+}
+
+table.heading tr td.title {
+    vertical-align: bottom;
+}
+
+table.heading tr td.extra {
+    vertical-align: bottom;
+    text-align: right;
+}
+
+.heading-text {
+    font-family: helvetica, arial;
+}
+
+.bigsection {
+    font-size: larger;
+}
+
+.title {
+    font-size: x-large;
+}
+
+.code {
+    font-family: monospace;
+}
+
+table {
+    width: 100%;
+    border-spacing : 0;
+    border-collapse : collapse;
+    border: 0;
+}
+
+td {
+    padding: 2;
+}
+
+td.section-title {
+    vertical-align: bottom;
+}
+
+td.multicolumn {
+    width: 25%;
+    vertical-align: bottom;
+}
+
+td.singlecolumn {
+    width: 100%;
+}
+</style>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="MPO.html" class="white">MPO</a>.hilfen</strong></td>
+<td class="extra"><a href=".">index</a><br></td></tr></table>
+    <p><span class="code">hilfen.py&nbsp;&nbsp;&nbsp;v0.4<br>
+2022-12&nbsp;Dominik&nbsp;Zobel</span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-Daten_An_Stuetzstellen"><strong>Daten_An_Stuetzstellen</strong></a>(xrefwerte, xdaten, extradaten)</dt><dd><span class="code">Erwartet&nbsp;die&nbsp;monoton&nbsp;steigenden&nbsp;Vektoren&nbsp;xrefwerte&nbsp;und&nbsp;xdaten&nbsp;sowie&nbsp;weitere<br>
+Vektoren&nbsp;mit&nbsp;der&nbsp;gleichen&nbsp;Laenge&nbsp;wie&nbsp;xdaten&nbsp;in&nbsp;extradaten.&nbsp;Diese&nbsp;Funktion&nbsp;unterteilt&nbsp;xdaten<br>
+in&nbsp;die&nbsp;Anzahl&nbsp;an&nbsp;Werten&nbsp;von&nbsp;xrefwerte&nbsp;und&nbsp;interpoliert&nbsp;an&nbsp;den&nbsp;entsprechenden&nbsp;Stellen.<br>
+Fuer&nbsp;alle&nbsp;Vektoren&nbsp;im&nbsp;optionalen&nbsp;extradaten&nbsp;wird&nbsp;an&nbsp;den&nbsp;gleichen&nbsp;Stellen&nbsp;die&nbsp;gleiche&nbsp;lineare<br>
+Interpolation&nbsp;durchgefuehrt.&nbsp;Gibt&nbsp;eine&nbsp;Liste&nbsp;mit&nbsp;den&nbsp;neuen&nbsp;Daten&nbsp;zurueck.&nbsp;Wenn&nbsp;xdaten&nbsp;nicht<br>
+monoton&nbsp;steigend&nbsp;ist,&nbsp;oder&nbsp;der&nbsp;erste&nbsp;Wert&nbsp;in&nbsp;xrefwerte&nbsp;kleiner&nbsp;als&nbsp;der&nbsp;erste&nbsp;(d.h.&nbsp;kleinste)<br>
+Wert&nbsp;in&nbsp;xdaten&nbsp;oder&nbsp;der&nbsp;Endwert&nbsp;von&nbsp;xrefwerte&nbsp;groesser&nbsp;als&nbsp;der&nbsp;letzte&nbsp;(d.h.&nbsp;groesste)&nbsp;Wert&nbsp;in<br>
+xdaten,&nbsp;dann&nbsp;wird&nbsp;eine&nbsp;Liste&nbsp;leerer&nbsp;Listen&nbsp;zurueckgegeben.</span></dd></dl>
+ <dl><dt><a name="-Daten_Reduzieren"><strong>Daten_Reduzieren</strong></a>(daten, intervall=200)</dt><dd><span class="code">Unterteile&nbsp;die&nbsp;uebergebenen&nbsp;daten&nbsp;(Liste&nbsp;an&nbsp;Listen)&nbsp;in&nbsp;Bloecke&nbsp;der&nbsp;Groesse&nbsp;intervall.<br>
+Bestimme&nbsp;den&nbsp;Mittelwert&nbsp;jedes&nbsp;Blocks&nbsp;und&nbsp;gebe&nbsp;die&nbsp;Liste&nbsp;an&nbsp;Listen&nbsp;mit&nbsp;den&nbsp;Mittelwerten&nbsp;zurueck.</span></dd></dl>
+ <dl><dt><a name="-Gleichmaessig_Unterteilte_Daten"><strong>Gleichmaessig_Unterteilte_Daten</strong></a>(x_min, x_max, num_werte, xdaten, extradaten=None)</dt><dd><span class="code">Erwartet&nbsp;einen&nbsp;monoton&nbsp;steigenden&nbsp;Vektor&nbsp;xdaten&nbsp;(und&nbsp;optional&nbsp;weitere&nbsp;Vektoren&nbsp;gleicher&nbsp;Laenge<br>
+in&nbsp;extradaten).&nbsp;Diese&nbsp;Funktion&nbsp;unterteilt&nbsp;xdaten&nbsp;in&nbsp;num_werte&nbsp;von&nbsp;x_min&nbsp;bis&nbsp;x_max&nbsp;und&nbsp;ermittelt<br>
+durch&nbsp;lineare&nbsp;Interpolation&nbsp;die&nbsp;entsprechenden&nbsp;Werte.&nbsp;Fuer&nbsp;alle&nbsp;Vektoren&nbsp;im&nbsp;optionalen&nbsp;extradaten<br>
+wird&nbsp;an&nbsp;den&nbsp;gleichen&nbsp;Stellen&nbsp;die&nbsp;gleiche&nbsp;lineare&nbsp;Interpolation&nbsp;durchgefuehrt.&nbsp;Gibt&nbsp;eine&nbsp;Liste<br>
+mit&nbsp;den&nbsp;neuen&nbsp;Daten&nbsp;zurueck.&nbsp;Wenn&nbsp;xdaten&nbsp;nicht&nbsp;monoton&nbsp;steigend&nbsp;ist,&nbsp;x_min&nbsp;kleiner&nbsp;als&nbsp;der&nbsp;erste<br>
+(d.h.&nbsp;kleinste)&nbsp;Wert&nbsp;in&nbsp;xdaten&nbsp;oder&nbsp;x_max&nbsp;groesser&nbsp;als&nbsp;der&nbsp;letzte&nbsp;(d.h.&nbsp;groesste)&nbsp;Wert&nbsp;in&nbsp;xdaten,<br>
+dann&nbsp;wird&nbsp;eine&nbsp;Liste&nbsp;leerer&nbsp;Listen&nbsp;zurueckgegeben.</span></dd></dl>
+ <dl><dt><a name="-LinearInterpoliertenIndexUndFaktor"><strong>LinearInterpoliertenIndexUndFaktor</strong></a>(vergleichswert, vergleichswertliste)</dt><dd><span class="code">Bestimme&nbsp;die&nbsp;Position&nbsp;von&nbsp;einem&nbsp;vergleichswert&nbsp;in&nbsp;einer&nbsp;(streng&nbsp;monoton&nbsp;steigenden)<br>
+vergleichswertliste.&nbsp;Dabei&nbsp;wird&nbsp;linear&nbsp;zwischen&nbsp;Zwei&nbsp;Werten&nbsp;interpoliert.&nbsp;Gibt&nbsp;den&nbsp;Indiex&nbsp;des<br>
+Wertes&nbsp;vor/zu&nbsp;dem&nbsp;vergleichswert&nbsp;und&nbsp;einen&nbsp;faktor&nbsp;zurueck&nbsp;[idx_davor,&nbsp;faktor].<br>
+Fuer&nbsp;spaeteres&nbsp;Interpolieren&nbsp;kann&nbsp;folgender,&nbsp;linearer&nbsp;Zusammenhang&nbsp;genutzt&nbsp;werden:<br>
+zielwert&nbsp;=&nbsp;zielvec[idx_davor]&nbsp;+&nbsp;faktor*(zielvec[idx_davor+1]-zielvec[idx_davor])</span></dd></dl>
+ <dl><dt><a name="-Runden_Auf_Signifikante_Stellen"><strong>Runden_Auf_Signifikante_Stellen</strong></a>(wert, stellen=6)</dt><dd><span class="code">Runde&nbsp;den&nbsp;uebergebenen&nbsp;Wert&nbsp;auf&nbsp;die&nbsp;maximal&nbsp;definierten&nbsp;stellen.</span></dd></dl>
+ <dl><dt><a name="-ZugriffEintrag"><strong>ZugriffEintrag</strong></a>(daten, zieleintrag)</dt><dd><span class="code">Ermittelt&nbsp;in&nbsp;einer&nbsp;(ggfs.&nbsp;verschachtelten)&nbsp;dict-Struktur&nbsp;namens&nbsp;daten&nbsp;den&nbsp;Wert&nbsp;des<br>
+geforderten&nbsp;zieleintrag.&nbsp;zieleintrag&nbsp;muss&nbsp;als&nbsp;Liste&nbsp;uebergeben&nbsp;werden.&nbsp;Gibt&nbsp;den&nbsp;wert&nbsp;des<br>
+Zieleintrags&nbsp;bei&nbsp;erfolgreichen&nbsp;Auffinden&nbsp;des&nbsp;zieleintrags&nbsp;zurueck,&nbsp;sonst&nbsp;None.</span></dd></dl>
+ <dl><dt><a name="-prod"><strong>prod</strong></a>(iterable)</dt><dd><span class="code">Erstellt&nbsp;das&nbsp;Produkt&nbsp;aller&nbsp;Eintraege&nbsp;des&nbsp;uebergebenen&nbsp;iterables.</span></dd></dl>
+</td></tr></table>
+</body></html>

@@ -2,8 +2,8 @@
 """
 
   M a t e r i a l  -  P a r a m e t e r  -  O p t i m i e r u n g
- |      \/      |      |     ___     \         .´   .---.   `. 
- |   |\    /|   |      |    |___)    /        /    /     \    \  
+ |      \/      |      |     ___     \         .´   .---.   `.
+ |   |\    /|   |      |    |___)    /        /    /     \    \
  |   | \__/ |   |      |     _____.-´         \    \     /    /
  |   |      |   |      |    |                  \    `---´    /
  |___|      |___|      |____|                   `._________.´
@@ -42,4 +42,5 @@ from .programmsteuerung import *
 __author__ = 'Dominik Zobel'
 __version__ = '0.4'
 __package__ = 'MPO'
- 
+
+
